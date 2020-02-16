@@ -1,0 +1,172 @@
+@import './variables';
+@import './mixin';
+
+.title-1 {
+    height: 25px;
+    width: 100%;
+    background: $window-color;
+    margin-top: 1em;
+    box-shadow: 0 1px 0 0 #110038;
+
+
+    p {
+        color: #ffffff;
+        font-size: 14px;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+
+}
+
+.ventana-search {
+    padding: 10px;
+    background-color: #E6E6E6;
+}
+
+.search {
+    @include flexNav;
+}
+
+.searchterm {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 1px 1px 0 0 #000000;
+    height: 48px;
+    font-family: $font;
+    font-size: 16px;
+    padding-left: 15px;
+
+
+}
+
+.btn-buscar {
+    display: flex;
+    justify-content: space-around;
+    background: #E6E6E6;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    width: 102px;
+    height: 36px;
+    color: #B4B4B4;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+
+/*fin de barra busqueda */
+
+.sugerencias {
+    margin-top: 1em;
+}
+
+.barra-sugerencias {
+    width: 100%;
+    padding: 10px 0;
+    background: #FFFAFE;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 1px 1px 0 0 #80687D;
+    font-family: $font;
+    font-size: 14px;
+
+}
+
+.box {
+    padding-top: 2em;
+
+}
+
+.contenedor-imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+
+    .gif img {
+        border: 0 1px 1px 0 solid #E6E6E6;
+        width: 313px;
+        height: 313px;
+    }
+}
+
+
+
+.title {
+    height: 18px;
+    width: 313px;
+    background: $window-color;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    @include flexNav;
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        color: #FFFFFF;
+        font-family: $font;
+    }
+
+    img {
+        display: inline;
+        margin: 0 .3em;
+    }
+}
+
+.ver-mas {
+    @include btn-ver-mas;
+    color: #FFFFFF;
+    font-family: $font;
+}
+
+
+/* tendencias */
+
+.tendencias {
+    width: 100%;
+    padding: 5px 0;
+    margin-top: 2em;
+    position: relative;
+
+    .barra-tendencias {
+        @extend .barra-sugerencias;
+        font-family: $font;
+        font-size: 14px;
+    }
+}
+
+.contenedor-imagenes2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+
+
+
+    .gif-2 img {
+        width: 313px;
+        height: 313px;
+        padding-top: 15px;
+
+      
+    }
+
+    .gif-3 img {
+        width: 650px;
+        height: 313px;
+        padding-top: 15px;
+    }
+}
+
+.title-2 {
+    @extend .title;
+    transform: translateY(-20px);
+    position: absolute;
+    box-shadow: none;
+    
+
+
+    p {
+        padding-left: 10px;
+    }
+}
