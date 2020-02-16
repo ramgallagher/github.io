@@ -100,10 +100,10 @@
     @include flexNav;
 
     p {
-        margin: 0;
+        margin-left: 5px;
         font-size: 14px;
         color: #FFFFFF;
-        font-family: $font;
+        font-family: $font;        
     }
 
     img {
@@ -116,6 +116,13 @@
     @include btn-ver-mas;
     color: #FFFFFF;
     font-family: $font;
+    font-size: 14px;
+    
+    &:hover {
+        border: 1px dotted #110038;
+        box-shadow: inset 0px 0px .1px .1px #110038;
+        cursor: pointer;
+    }
 }
 
 
@@ -147,8 +154,7 @@
         width: 313px;
         height: 313px;
         padding-top: 15px;
-
-      
+        
     }
 
     .gif-3 img {
