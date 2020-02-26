@@ -29,12 +29,11 @@ header {
 .contenedor-botones {
     @include flexNav;
 
-
     button.btn-crear {
 
         font-family: $font;
         font-size: 16px;
-        width: 80%;
+        width: 50%;
         margin-right: 1em;
         padding: .4em;
         color: $text-color;
@@ -47,16 +46,18 @@ header {
             box-shadow: inset 0px 0px .1px .1px #110038;
             cursor: pointer;
         }
+
         &:active {
             border: 1px dotted #110038;
         }
-        
+
     }
 
 
     button.btn-tema {
+
         @extend .btn-crear;
-        width: 65%;
+        width: 40%;
         margin: 0;
         color: $text-color;
         font-family: $font;
@@ -64,14 +65,68 @@ header {
     }
 
     button.btn-tema2 {
+
         @extend .btn-tema;
-        width: 10%;
+        width: 80%;
         margin-right: 1em;
+
+    }
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-content {
+    position: absolute;
+    z-index: 1;
+    transform: translateX(-123px);
+    
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        color: #110038;
+        padding: 10px 23px;
+        margin-top: 0px;
+        list-style: none;
+        width: 110px;
+        height: auto;
+        
+    }
+
+    li {
+        
+        background: #F0F0F0;
+        border: 1px solid #808080;
+        box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+        font-size: 16px;
+        margin-bottom: 7px;
+        width: 140px;
+        height: 36px;
+    
+        
+    }
+
+
+    p {
+        margin: 10px ;
+    }
+    span {
+        text-decoration: underline;
     }
 }
 
 .mis-guifos {
     width: 200px;
+    margin-left: 20px;
+   
 
 
     span {
@@ -100,6 +155,39 @@ header {
 
     }
 
+
+
+}
+
+
+
+.toggle {
+    width: 75%;
+    height: 102px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    button {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: $font;
+        font-size: 16px;
+        text-align: center;
+        margin: 10px auto;
+        display: block;
+        width: 150px;
+        height: 36px;
+    }
+}
+
+.menu {
+    margin-top: 22px;
 
 
 }
