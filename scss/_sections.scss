@@ -48,10 +48,26 @@
     box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
     width: 102px;
     height: 36px;
+    margin-left: 10px;
     color: #B4B4B4;
     margin-left: 10px;
     font-size: 16px;
+
+    &:hover {
+        background-color: #F7C9F3;
+        cursor: pointer;
+        color: #110038;
+        
+
+    }
+    
+
+
+
+
 }
+
+
 
 
 /*fin de barra busqueda */
@@ -103,7 +119,7 @@
         margin-left: 5px;
         font-size: 14px;
         color: #FFFFFF;
-        font-family: $font;        
+        font-family: $font;
     }
 
     img {
@@ -117,7 +133,7 @@
     color: #FFFFFF;
     font-family: $font;
     font-size: 14px;
-    
+
     &:hover {
         border: 1px dotted #110038;
         box-shadow: inset 0px 0px .1px .1px #110038;
@@ -154,7 +170,7 @@
         width: 313px;
         height: 313px;
         padding-top: 15px;
-        
+
     }
 
     .gif-3 img {
@@ -169,7 +185,7 @@
     transform: translateY(-20px);
     position: absolute;
     box-shadow: none;
-    
+
 
 
     p {

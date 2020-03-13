@@ -1,0 +1,89 @@
+.ventana-crear {
+    display: flex;
+    flex-direction: column;
+    width: 684px;
+    height: 386px;
+    margin: auto;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.title-4 {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    height: 24px;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+
+    p {
+        font-weight: bold;
+        font-size: 14px;
+        color: #FFFFFF;
+        margin-left: 5px;
+    }
+}
+
+.crear-guifos {
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    p {
+        margin-left: 1em;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    img {
+        width: 32px;
+        height: 32px;
+    }
+
+}
+
+.contenedor-ventana {
+    margin: 2em 2em 2em 4em;
+}
+
+.parrafo {
+    margin: 0 3em;
+
+    p {
+        font-size: 14px;
+        color: #110038;
+        letter-spacing: 0;
+        line-height: 20px;
+        white-space: pre-line;
+        text-align: justify;
+    }
+
+    span {
+        font-weight: bold;
+        color: #00001A;
+    }
+
+}
+
+.guifos-botones {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.3em;
+
+    button {
+        font-family: $font;
+        font-size: 16px;
+        width: 144px;
+        margin-right: 1em;
+        padding: .4em;
+        background: #FFF4FD;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        
+        &:hover {
+            
+            background: #F7C9F3;
+            cursor: pointer;
+        }
+        
+    }
+}

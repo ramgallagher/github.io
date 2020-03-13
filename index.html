@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./scss/main.css">
-    
     <title>gifOS</title>
 </head>
 
@@ -18,23 +17,27 @@
     <div class="contenedor">
         <header>
             <div class="contenedor-logo">
-                <img src="./img/gifOF_logo.png" alt="logo">
-            </div>
+                <a href="index.html"> <img src="./img/gifOF_logo.png" alt="logo" id="logo"></a></div>
+                  
             <div class="contenedor-botones">
-                <button class="btn-crear">Crear Guifos</button>
+                <button class="btn-crear" OnClick=" location.href='captura.html'">Crear Guifos</button>
                 <button class="btn-tema">Elegir tema</button>
                 <div class="dropdown">
                     <button class="btn-tema2" id="btn-menu">
                         <img src="./img/dropdown.svg" alt=""></button>
                     <div class="drop-content" id="list">
                         <ul>
-                            <li> <p> <span>S</span>ailor Day</p></li>
-                            <li> <p> Sailor Night</p></li>
+                            <li> <button id="day">
+                                    <p> <span>S</span>ailor Day</p>
+                                </button></li>
+                            <li> <button id="dark">
+                                    <p> Sailor Night</p>
+                                </button></li>
                         </ul>
                     </div>
                 </div>
                 <div class="mis-guifos">
-                    <a href="#"> <span>M</span>is Guifos</a>
+                    <a href="misguifos.html"> <span>M</span>is Guifos</a>
                 </div>
             </div>
         </header>
@@ -45,13 +48,22 @@
                 </div>
                 <div class="ventana-search">
                     <div class="search">
-                        <input type="text" class="searchterm"
+                        <input type="search" id="search" class="searchterm"
                             placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-                        <button class="btn-buscar">
-                            <img src="./img/lupa_inactive.svg" alt="lupa"> Buscar
+
+                        <button class="btn-buscar" id="btn-search" onclick="dropdown()">
+                            <img onmouseover="active()" onmouseout="inactive()" class="lupa-active"
+                                src="./img/lupa_inactive.svg" alt="lupa"> Buscar
+
                         </button>
                     </div>
                 </div>
+                <div class="dropdown-search" id="lista">
+                    <button><span> Resultado de búsqueda sugerido</span></button>
+                    <button><span> Un resultado similar de búsqueda</span></button>
+                    <button><span> Y otro más</span></button>
+                </div>
+
             </div>
 
 
@@ -163,7 +175,9 @@
     </div>
 
 
-    <script src="/scripts.js">  </script>
+
+    <script src="/scripts.js"></script>
+
 </body>
 
 </html>
