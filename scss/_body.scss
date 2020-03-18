@@ -1,5 +1,6 @@
 @import './mixin';
 
+
 body {
     margin: 0;
     height: 100%;
@@ -13,40 +14,3 @@ body {
 }
 
 
-/* dark mode */
-
-.dark {
-    background-color: #110038;
-    color: white;
-
-    .main-title,
-    .title-1,
-    .title {
-        @include title-dark;
-    }
-    
-    
-
-    .btn-crear,
-    .btn-tema,
-    .btn-tema2 {
-        @include btn-dark;
-
-    }
-
-
-    .mis-guifos a {
-        color: white;
-    }
-
-    .barra-sugerencias {
-        @include barra-dark;
-    }
-
-    .ventana-search,
-    .dropdown-search {
-        @include ventana-dark;
-    }
-
-
-}

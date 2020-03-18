@@ -6,7 +6,8 @@
     width: 100%;
     background: $window-color;
     margin-top: 1em;
-    box-shadow: 0 1px 0 0 #110038;
+    box-shadow: inset -1px 0px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+
 
 
     p {
@@ -18,9 +19,11 @@
 
 }
 
+
 .ventana-search {
     padding: 10px;
     background-color: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 1px 0 0 #FFFFFF;
 }
 
 .search {
@@ -54,13 +57,11 @@
     font-size: 16px;
 
     &:hover {
-        background-color: #F7C9F3;
         cursor: pointer;
-        color: #110038;
-        
+
 
     }
-    
+
 
 
 
