@@ -24,12 +24,32 @@ function dropdown() {
 }
 
 
+
+
 const body = document.querySelector('body');
 document.getElementById('dark').addEventListener('click', () => {
     const body = document.querySelector('body');
     body.classList.add('dark');
+    body.classList.remove('light');
+
+    var lupa = document.getElementById('lupa_inactive');
     var logo = document.getElementById('logo')
     logo.src = "./img/gifOF_logo_dark.png";
-
+    localStorage.setItem('color-theme', 'dark');
 
 })
+
+document.getElementById('day').addEventListener('click', () => {
+    const body = document.querySelector('body');
+    body.classList.add('light');
+    body.classList.remove('dark');
+    logo.src = "./img/gifOF_logo.png"
+    localStorage.setItem('color-theme', 'day');
+})
+
+const colorfondo = localStorage.getItem('color-theme');
+if (colorfondo === null) {
+    body.className = 'light';
+} else {
+    body.className = colorfondo;
+}
