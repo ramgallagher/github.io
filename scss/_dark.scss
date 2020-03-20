@@ -19,7 +19,7 @@
 
 
     }
-
+    
 
     .mis-guifos a {
         color: white;
@@ -29,7 +29,7 @@
         @include barra-dark;
     }
 
-    
+
 
     .ventana-search,
     .dropdown-search {
@@ -66,9 +66,11 @@
         }
 
     }
+
     .title-4 {
         @include title-dark;
     }
+
     .guifos-botones {
         @include btn-dark;
     }

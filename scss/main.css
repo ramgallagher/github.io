@@ -59,7 +59,6 @@ header.captura {
 
 header.captura .contenedor-logo img {
   margin-left: 0;
-  background-image: url(../img/gifOF_logo.png);
   -webkit-transform: translateX(-25px);
           transform: translateX(-25px);
   overflow: hidden;
@@ -826,7 +825,7 @@ header.captura .contenedor-logo img {
   background-image: url(../img/gifOF_logo.png);
   -webkit-transform: translateX(-25px);
           transform: translateX(-25px);
-  overflow: hidden;
+  display: none;
 }
 
 .light .flecha img {
