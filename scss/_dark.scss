@@ -74,4 +74,19 @@
     .guifos-botones {
         @include btn-dark;
     }
+    #tendencias_resultados {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+        
+        img {
+            padding: 5px;
+        }
+
+        
+
+    }
+
 }

@@ -1,60 +1,38 @@
-function init () {
+function traerGifs () {
+    let fig = document.createElement('div')
+    let img = document.createElement('img')
+    img.setAttribute("width", "313")
+    img.setAttribute("height", "313")
+    img.src = obj.images.downsized.url
+    fig.appendChild(img);
+    results.appendChild(fig);
+}
 
-    traerGifs()
+
+
+
+    const apikey = 'bDgrAsOgnsjQTVFZNv9Vu5m7Z6kRi930';
+    const path = `https://api.giphy.com/v1/gifs/trending?api_key=${apikey}&limit=12`;
     
-    const container = document.getElementById("tendencias");
-    let busqueda = document.getElementById('search').value.trim();
-    traerGifs(busqueda);
-
-    function traerGifs(busqueda) {
-        let url = '';
-
-        if (busqueda) {
-            url= `htpps://api.giphy.com/v1/gifs/search?api_key=bDgrAsOgnsjQTVFZNv9Vu5m7Z6kRi930&limit=10&q=`
-            url += busqueda;
-        } else {
-            url = `htpps://api.giphy.com/v1/gifs/trending?api_key=bDgrAsOgnsjQTVFZNv9Vu5m7Z6kRi930&limit=10`
-        }
-
-      }
-      function loadGif(gif) {
-
-
-        let fig = document.createElement('div')
-        let img = document.createElement('img')
-        let fc = document.createElement('figcaption')
-        img.setAttribute("width", "270 ")
-        img.setAttribute("height", "270")
-        img.src = gif.images.downsized.url
-        img.alt = gif.title
-        fig.appendChild(img)
-        fig.appendChild(fc)
-        container.appendChild(fig)
+    
+    fetch(path).then(function (response) {
+        return response.json()
+    }).then(function (json) {
+        console.log(json.data[0].images.fixed_width.url)
+        const results = document.getElementById('tendencias_resultados');
+        let resultsHTML = '';
+        json.data.forEach(function (obj) {
+            
+            const url = obj.images.fixed_width.url
+            const width = obj.images.fixed_width.width
+            resultsHTML += `<img src="${url}" width="313" height="313">`
+    
+    
+        })
+        results.innerHTML = resultsHTML;
+    
+    }).catch(function (err) {
+        console.log(err.message)
+    })
 
 
-
-
-    }
-
-
-        
-
-        fetch(url)
-            .then(response => response.json())
-            .then(content => {
-                console.log(content.data)
-                console.log("META", content.meta)
-                container.innerHTML = ''
-                content.data.forEach(gif => {
-                   
-                    loadGif(gif)
-                });
-
-                document.querySelector("#search").value = ""
-
-            })
-            .catch(err => {
-                console.error(err);
-            });
-
-        }
