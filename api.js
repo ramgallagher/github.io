@@ -1,12 +1,3 @@
-function traerGifs () {
-    let fig = document.createElement('div')
-    let img = document.createElement('img')
-    img.setAttribute("width", "313")
-    img.setAttribute("height", "313")
-    img.src = obj.images.downsized.url
-    fig.appendChild(img);
-    results.appendChild(fig);
-}
 
 
 

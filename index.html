@@ -50,12 +50,10 @@
                 </div>
                 <div class="ventana-search">
                     <div class="search">
-                        <input type="search" id="search" class="searchterm"
+                        <input type="search" id="search-input" class="searchterm"
                             placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-
                         <button class="btn-buscar" id="btn-search" onclick="dropdown()">
                             <img src="./img/lupa_inactive.svg" alt="lupa" id="lupa_inactive"> Buscar
-
                         </button>
                     </div>
                 </div>
@@ -78,25 +76,25 @@
             <div class="contenedor-imagenes">
                 <div class="box">
                     <div class="title">
-                        <p>#KermitDancing </p>
+                        <p>#bear</p>
                         <img src="./img/button close.svg" alt="boton">
                     </div>
                     <div class="gif">
-                        <img src="./img/gifs/kermit.gif" alt="kermit">
+                        <img src="./img/gifs/bear.gif" alt="kermit">
                     </div>
-                    <button class="ver-mas">Ver más...</button>
+                    <button class="ver-mas" id="sugerencia1">Ver más...</button>
                 </div>
 
 
                 <div class="box">
                     <div class="title">
-                        <p>#KermitWig </p>
+                        <p>#Kermit </p>
                         <img src="./img/button close.svg" alt="boton">
                     </div>
                     <div class="gif">
                         <img src="./img/gifs//kermitconpeluca.gif" alt="kermit">
                     </div>
-                    <button class="ver-mas">Ver más...</button>
+                    <button class="ver-mas" id="sugerencia2">Ver más...</button>
                 </div>
 
 
@@ -108,7 +106,7 @@
                     <div class="gif">
                         <img src="./img/gifs/muppet.gif" alt="kermit">
                     </div>
-                    <button class="ver-mas">Ver más...</button>
+                    <button class="ver-mas" id="sugerencia3">Ver más...</button>
                 </div>
 
 
@@ -120,7 +118,7 @@
                     <div class="gif">
                         <img src="./img/gifs/calamardo.gif" alt="kermit">
                     </div>
-                    <button class="ver-mas">Ver más...</button>
+                    <button class="ver-mas" id="sugerencia4">Ver más...</button>
                 </div>
 
 
@@ -128,9 +126,13 @@
         </section>
 
         <section>
-            <div class="tendencias">
-                <input type="text" class="barra-tendencias" placeholder="  Tendencias:">
+            <div class="tendencias" id="ventana-tendencias">
+                <input type="text" id="texto-tendencias" class="barra-tendencias" placeholder="  Tendencias:">
             </div>
+            <div class="tendencias" id="ventana-resultado">
+                <input type="text" id="texto-resultados" class="barra-tendencias" placeholder="  Resultados:">
+            </div>
+            
             <div id="tendencias_resultados">
             </div>
 
@@ -142,7 +144,7 @@
 
 
     <script src="/scripts.js"></script>
-
+    <script src="/search.js"></script>
     <script src="/camara.js"></script>
 
 

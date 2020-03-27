@@ -25,6 +25,15 @@ function dropdown() {
 
 
 
+let ventanaTendencias = document.getElementById('ventana-tendencias');
+let ventanaResultados = document.getElementById('ventana-resultado');
+
+ventanaTendencias.style.display = "block";
+ventanaResultados.style.display = "none";
+
+
+
+
 
 const body = document.querySelector('body');
 document.getElementById('dark').addEventListener('click', () => {
@@ -34,8 +43,6 @@ document.getElementById('dark').addEventListener('click', () => {
     var logo = document.getElementById('logo')
     logo.src = "./img/gifOF_logo_dark.png";
     localStorage.setItem('color-theme', 'dark');
-    
-    
 
 })
 
@@ -45,18 +52,16 @@ document.getElementById('day').addEventListener('click', () => {
     body.classList.remove('dark');
     logo.src = "./img/gifOF_logo.png"
     localStorage.setItem('color-theme', 'day');
-   
+
 })
 
 
 
 const colorfondo = localStorage.getItem('color-theme');
-if (colorfondo === null)  {
-    body.className = 'light';    
-    
+if (colorfondo === null) {
+    body.className = 'light';
+
 } else {
     body.className = colorfondo;
-    
+
 }
-
-
