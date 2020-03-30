@@ -10,7 +10,18 @@
         @include title-dark;
     }
 
-
+    
+    .logo1 {
+        display: none;
+    }
+    
+    .logo2 {
+        width: 102.6px;
+        display: block;
+        position: absolute;
+        top: 59px;
+        left: 7%;
+    }
 
     .btn-crear,
     .btn-tema,

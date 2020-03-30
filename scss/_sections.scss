@@ -1,6 +1,17 @@
 @import './variables';
 @import './mixin';
 
+
+.logo1 {
+    position: absolute;
+    top: 59px;
+    left: 7%;
+}
+
+.logo2 {
+    display: none;
+}
+
 .title-1 {
     height: 25px;
     width: 100%;
@@ -89,8 +100,16 @@
 }
 
 .box {
-    padding-top: 2em;
+    background: #e6e6e6;
+    box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+    
+    width: 313px;
+    height: 313px;
 
+    figure {
+        margin: 0;
+        margin-left: 4px;
+    }
 }
 
 .contenedor-imagenes {
@@ -99,11 +118,12 @@
     align-items: center;
     align-content: center;
     justify-content: space-between;
+    margin-top: 20px;
 
     .gif img {
         border: 0 1px 1px 0 solid #E6E6E6;
-        width: 313px;
-        height: 313px;
+        width: 306px;
+        height: 292px;
     }
 }
 
@@ -192,4 +212,17 @@
     p {
         padding-left: 10px;
     }
+}
+
+#tendencias_resultados {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+
+    img {
+        padding: 5px;
+    }
+
 }
