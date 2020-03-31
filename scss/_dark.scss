@@ -1,6 +1,7 @@
 /* dark mode */
 
 .dark {
+
     background-color: #110038;
     color: white;
 
@@ -10,16 +11,16 @@
         @include title-dark;
     }
 
-    
+
     .logo1 {
         display: none;
     }
-    
+
     .logo2 {
         width: 102.6px;
         display: block;
         position: absolute;
-        top: 59px;
+        top: 7%;
         left: 7%;
     }
 
@@ -30,7 +31,7 @@
 
 
     }
-    
+
 
     .mis-guifos a {
         color: white;
@@ -43,6 +44,7 @@
 
 
     .ventana-search,
+    .ventana-crear,
     .dropdown-search {
         @include ventana-dark;
     }
@@ -82,22 +84,59 @@
         @include title-dark;
     }
 
-    .guifos-botones {
-        @include btn-dark;
+    .crear-guifos p {
+        color: #110038
     }
+    
+
     #tendencias_resultados {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         align-content: center;
         justify-content: space-around;
-        
+
         img {
             padding: 5px;
         }
 
-        
+
 
     }
 
-}
+    .contenedor-logo-captura {
+        img {
+            width: 102.6px;
+            display: block;
+            top: 7%;
+            left: 7%;
+        }
+
+        .logo1 {
+            display: none;
+        }
+
+        .logo2 {
+
+            position: absolute;
+            top: 7%;
+            left: 7%;
+        }
+
+    }
+
+    .guifos-botones {
+
+        float: right;
+
+        button {
+
+            @include btn-dark;
+
+
+
+
+        }
+    }
+
+    }

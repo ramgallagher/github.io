@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/main.css">
+
+    <title>gifOS</title>
+</head>
+
+<body>
+
+    <div class="main-title">
+        <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+    </div>
+    <div class="contenedor">
+        <header>
+            <div class="flecha">
+                <a href="index.html"> <img src="./img/arrow.svg" alt="flecha"></a>
+            </div>
+            <div class="contenedor-logo">
+                <a href="index.html"> <img src="./img/gifOF_logo.png" alt="logo" id="logo" class="logo1"></a>
+                <a href="index.html"> <img src="./img/gifOF_logo_dark.png" alt="logo" id="logo" class="logo2"></a>
+            </div>
+            <div class="contenedor-botones">
+                <button class="btn-tema">Elegir tema</button>
+                <div class="dropdown">
+                    <button class="btn-tema2" id="btn-menu">
+                        <img src="./img/dropdown.svg" alt=""></button>
+                    <div class="drop-content" id="list">
+                        <ul>
+                            <li> <button id="day">
+                                    <p> <span>S</span>ailor Day</p>
+                                </button></li>
+                            <li> <button id="dark">
+                                    <p> Sailor Night</p>
+                                </button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mis-guifos">
+                    <a href="#"> <span>M</span>is Guifos</a>
+                </div>
+            </div>
+        </header>
+        <section>
+            <!--Ventana de instrucciones -->
+            <div class="ventana-crear" id="ventana-crear">
+                <div class="title-4">
+                    <p>Crear Guifos</p>
+                </div>
+                <div class="contenedor-ventana">
+                    <div class="crear-guifos">
+                        <img src="./img/window img.png" alt="window">
+                        <p class="parrafo">Aquí podrás crear tus propios guifos</p>
+                    </div>
+                    <div class="parrafo">
+                        <p>Crear tu <span>guifo</span> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos
+                            personalizados. Los pasos para crear tu guifo son:
+
+                            <span>1)</span> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)
+                            <span>2)</span> Capturar tu momento guifo
+                            <span>3)</span> Revisar el momento
+                            <span>4)</span> Listo para subir y compartir!
+                            ¿Quieres comenzar a crear tu <span>guifo</span> ahora?</p>
+                    </div>
+                    <div class="guifos-botones">
+                        <button class="btn-cancelar"> Cancelar</button>
+                        <button class="btn-start" id="btn-comenzar"> Comenzar</button>
+                    </div>
+                </div>
+            </div>
+            <!--Fin de instrucciones -->
+            <!--Ventana de captura y cambio de botones  -->
+            <div class="ventana-crear-captura" id="ventana-captura">
+                <div class="title-4">
+                    <p>Un chequeo antes de empezar</p>
+                </div>
+                <div class="contenedor-ventana-captura">
+
+                    <div id="contenedor-video" class="video-container">
+                        <video id="contenedor-captura"></video>
+                    </div>
+                    <div class="capturar-botones">
+                        <button class="btn-cam"> <img src="./img/camera.svg" alt=""> </button>
+                        <button class="btn-capturar"> Capturar</button>
+
+
+                    </div>
+                </div>
+            </div>
+            <!--Fin Ventana de captura y cambio de botones  -->
+
+            <section>
+
+
+
+                <div class="sugerencias">
+                    <input type="text" class="barra-sugerencias" placeholder="  Mis guifos:">
+                </div>
+                <div class="contenedor-imagenes">
+
+            </section>
+
+
+            <script src="/camara.js"></script>
+            <script src="./scripts.js"></script>
+    </div>
+
+</body>
+
+</html>
+
+<!-- 
+.clase>img.imagen+p+tab -->

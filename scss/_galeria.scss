@@ -1,9 +1,28 @@
+@import './variables';
+@import './mixin';
+
+
 .contenedor-logo-captura {
     img {
         width: 102.6px;
+        display: block;
+        top: 7%;
+        left: 7%;
+    }
+    .logo1 {
+        position: absolute;
+        top: 7%;
+        left: 7%;
+    }
+    
+    .logo2 {
         display: none;
     }
 
+}
+
+.contenedor {
+    margin: 2.4% 6.9%;
 }
 
 .ventana-crear {
@@ -11,7 +30,7 @@
     flex-direction: column;
     width: 684px;
     height: 386px;
-    margin: auto;
+    margin: 2em auto;
     background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
@@ -59,7 +78,7 @@
     }
 
     .video-container {
-        margin: 0 auto;
+        margin: 5px auto;
         width: 838px;
         height: 440px;
         background: #FFFFFF;

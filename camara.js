@@ -12,3 +12,5 @@ botonComenzar.addEventListener('click', function() {
     contenedorCaptura.style.display = "block";
 })
 
+
+
