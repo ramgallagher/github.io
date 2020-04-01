@@ -50,6 +50,7 @@
         color: #FFFFFF;
         margin-left: 5px;
     }
+
     img {
         margin-right: 10px;
     }
@@ -89,6 +90,22 @@
         background: #FFFFFF;
         border: 1px solid #979797;
         box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+
+
+
+        video {
+            width: 838px;
+            height: 440px;
+            object-fit: cover;
+        }
+
+    }
+
+    .contenedor-captura {
+        width: 838px;
+        height: 440px;
+
+
     }
 }
 
@@ -142,16 +159,17 @@
     display: flex;
 
 }
+
 .btn-listo {
-        height: 36px;
-        font-family: $font;
-        font-size: 16px;
-        width: 144px;
-        background: #FF6161;
-        border: 1px solid #110038;
-        box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
-        color: white;
-    }
+    height: 36px;
+    font-family: $font;
+    font-size: 16px;
+    width: 144px;
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+    color: white;
+}
 
 
 .guifos-botones {
@@ -176,6 +194,52 @@
         }
 
     }
+
+
+}
+
+.timer {
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    margin: auto;
+    padding: 2px 30px;
+    float: left;
+}
+
+.btn-repetir {
+    font-size: 16px;
+    color: #110038;
+    text-align: center;
+    line-height: 18px;
+    background: #fff4fd;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+    width: 144px;
+    padding: .4em;
+
+    &:hover,&:active{
+        background: #f0e5ee;
+        outline: 1px dashed #110038;
+        outline-offset: -4px;
+        cursor: pointer;
+    }
+    
+}
+
+.btn-subir {
+    font-size: 16px;
+    color: #110038;
+    text-align: center;
+    line-height: 18px;
+    background: #f7c9f3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+    display: flex;
+    width: 144px;
+    padding: .4em;
+    margin-left: 1em;
 
     
 }

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./scss/main.css">
-
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="https://www.webrtc-experiment.com/gif-recorder.js"></script>
     <title>gifOS</title>
 </head>
 
@@ -76,19 +77,22 @@
             <!--Ventana de captura y cambio de botones  -->
             <div class="ventana-crear-captura" id="ventana-captura">
                 <div class="title-4">
-                    <p>Un chequeo antes de empezar</p>
+                    <p id="titulo">Un chequeo antes de empezar</p>
                     <a href="upload.html"> <img src="./img/button close.svg" alt="boton" class="img1"></a>
                 </div>
                 <div class="contenedor-ventana-captura">
 
                     <div id="contenedor-video" class="video-container">
                         <video id="contenedor-captura"></video>
+                        <div class="timer"><p id='crono'>00:00:00:00</p></div>
                     </div>
                     <div class="capturar-botones">
                         <button class="btn-cam"> <img src="./img/camera.svg" alt=""> </button>
-                        <button class="btn-capturar" id="btn-capturar"> Capturar</button>
+                        <button class="btn-capturar" id="btn-capturar" onclick="empezarDetener(this);"> Capturar</button>
                         <button class="btn-record"> <img src="./img/recording.svg" alt=""></button>
                         <button class="btn-listo">Listo</button>
+                        <button class="btn-repetir" id="btn-repetir"> Repetir Captura</button>
+                        <button class="btn-subir" id="btn-subir"> Subir Guifo</button>
 
 
                     </div>

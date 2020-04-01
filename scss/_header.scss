@@ -19,21 +19,24 @@
 header {
     @include flexNav;
 }
+
 header.captura {
     display: flex;
     justify-content: start;
     align-items: center;
 
-    
+
     .contenedor-logo img {
         margin-left: 0;
         transform: translateX(-25px);
         overflow: hidden;
     }
 }
+
 .flecha img {
     transform: translateX(-50px);
 }
+
 .contenedor-logo {
     img {
         width: 102.6px;
@@ -45,8 +48,15 @@ header.captura {
 
     .btn-crear {
         @include btn-light;
-        
-      }
+
+        &:hover {
+            background: #e6bbe2;
+            outline: 1px dashed #110038;
+            outline-offset: -4px;
+            cursor: pointer;
+        }
+
+    }
 
 
     .btn-tema {
@@ -160,8 +170,9 @@ header.captura {
 
 
     }
-    
+
 }
+
 .lupa-active {
     display: block;
 }
@@ -170,11 +181,15 @@ header.captura {
     display: none;
 }
 
-.show { display: block;}
+.show {
+    display: block;
+}
 
 .mis-guifos {
-    
+
     margin-left: 20px;
+
+
 
 
 
@@ -192,7 +207,8 @@ header.captura {
         margin: 0.5em auto;
 
         &:active {
-            color: #726199;
+            color: #b4b4b4;
+            outline: none;
         }
 
     }

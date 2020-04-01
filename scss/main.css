@@ -111,6 +111,13 @@ header.captura .contenedor-logo img {
   border: 1px dotted #110038;
 }
 
+.contenedor-botones .btn-crear:hover, .contenedor-botones .btn-tema:hover, .contenedor-botones button.btn-tema2:hover {
+  background: #e6bbe2;
+  outline: 1px dashed #110038;
+  outline-offset: -4px;
+  cursor: pointer;
+}
+
 .contenedor-botones .btn-tema, .contenedor-botones button.btn-tema2 {
   width: 131px;
   margin: 0;
@@ -252,7 +259,8 @@ header.captura .contenedor-logo img {
 }
 
 .mis-guifos a:active {
-  color: #726199;
+  color: #b4b4b4;
+  outline: none;
 }
 
 .mis-guifos:hover {
@@ -415,6 +423,18 @@ header.captura .contenedor-logo img {
           box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
 }
 
+.ventana-crear-captura .video-container video {
+  width: 838px;
+  height: 440px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ventana-crear-captura .contenedor-captura {
+  width: 838px;
+  height: 440px;
+}
+
 .crear-guifos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -506,6 +526,53 @@ header.captura .contenedor-logo img {
 .guifos-botones button:hover {
   background: #F7C9F3;
   cursor: pointer;
+}
+
+.timer {
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+  box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+  margin: auto;
+  padding: 2px 30px;
+  float: left;
+}
+
+.btn-repetir {
+  font-size: 16px;
+  color: #110038;
+  text-align: center;
+  line-height: 18px;
+  background: #fff4fd;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+          box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+  width: 144px;
+  padding: .4em;
+}
+
+.btn-repetir:hover, .btn-repetir:active {
+  background: #f0e5ee;
+  outline: 1px dashed #110038;
+  outline-offset: -4px;
+  cursor: pointer;
+}
+
+.btn-subir {
+  font-size: 16px;
+  color: #110038;
+  text-align: center;
+  line-height: 18px;
+  background: #f7c9f3;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+          box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 144px;
+  padding: .4em;
+  margin-left: 1em;
 }
 
 /* dark mode */
