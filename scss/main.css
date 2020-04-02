@@ -209,6 +209,11 @@ header.captura .contenedor-logo img {
   height: auto;
 }
 
+.dropdown-search p {
+  margin: 0 0 1em 0.5em;
+  padding-top: 1em;
+}
+
 .dropdown-search button {
   background: #F0F0F0;
   border: 1px solid #808080;
@@ -229,12 +234,12 @@ header.captura .contenedor-logo img {
   transition: .3 s ease-in-out;
 }
 
-.lupa-active {
-  display: block;
+.lupa2, .lupa3, .lupa4 {
+  display: none;
 }
 
-.lupa-inactive {
-  display: none;
+.lupa1 {
+  display: block;
 }
 
 .show {

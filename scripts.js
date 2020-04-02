@@ -31,6 +31,7 @@ document.getElementById('dark').addEventListener('click', () => {
     body.classList.add('dark');
     body.classList.remove('light');
     localStorage.setItem('color-theme', 'dark');
+    
 
 })
 
@@ -39,6 +40,7 @@ document.getElementById('day').addEventListener('click', () => {
     body.classList.add('light');
     body.classList.remove('dark');
     localStorage.setItem('color-theme', 'day');
+    
 
 })
 

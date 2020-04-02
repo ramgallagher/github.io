@@ -19,7 +19,7 @@
         <header>
             <div class="contenedor-logo">
                 <a href="index.html"> <img src="./img/gifOF_logo.png" alt="logo" id="logo" class="logo1"></a></div>
-                <a href="index.html"> <img src="./img/gifOF_logo_dark.png" alt="logo" id="logo" class="logo2"></a>
+            <a href="index.html"> <img src="./img/gifOF_logo_dark.png" alt="logo" id="logo" class="logo2"></a>
 
             <div class="contenedor-botones">
                 <button class="btn-crear" OnClick=" location.href='upload.html'">Crear Guifos</button>
@@ -51,17 +51,22 @@
                 <div class="ventana-search">
                     <div class="search">
                         <input type="search" id="search-input" class="searchterm"
-                            placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                            placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" oninput="cambioEstado()">
                         <button class="btn-buscar" id="btn-search" onclick="dropdown()">
-                            <img src="./img/lupa_inactive.svg" alt="lupa" id="lupa_inactive"> Buscar
+                            <img src="./img/lupa_inactive.svg" alt="magnifying_glass" class="lupa1"></img>
+                            <img src="./img/lupa.svg" alt="magnifying_glass_light" class="lupa2">
+                            <img src="./img/Combined Shape.svg" alt="magnifying_glass_light" class="lupa3">
+                            <img src="./img/lupa_light.svg" alt="magnifying_glass_light"
+                                class="lupa4">Buscar</button>
                         </button>
                     </div>
                 </div>
             </div>
             <div class="dropdown-search" id="lista">
-                <button id="sugerencia5"><span>  #Simpsons </span></button>
-                <button id="sugerencia6"><span>  #Cats </span></button>
-                <button id="sugerencia7"><span>  #Futurama </span></button>
+                <p>Busquedas populares: </p>
+                <button id="sugerencia5"><span> #Simpsons </span></button>
+                <button id="sugerencia6"><span> #Cats </span></button>
+                <button id="sugerencia7"><span> #Futurama </span></button>
             </div>
 
 
@@ -132,7 +137,7 @@
             <div class="tendencias" id="ventana-resultado">
                 <input type="text" id="texto-resultados" class="barra-tendencias" placeholder="  Resultados:">
             </div>
-            
+
             <div id="tendencias_resultados">
             </div>
 
@@ -145,7 +150,6 @@
 
 
     <script src="/search.js"></script>
-    <script src="/camara.js"></script>
     <script src="/scripts.js"></script>
 
 

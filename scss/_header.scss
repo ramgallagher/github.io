@@ -151,6 +151,11 @@ header.captura {
     width: 100%;
     height: auto;
 
+    p {
+        margin: 0 0 1em 0.5em;
+        padding-top: 1em;
+    }
+
     button {
         background: #F0F0F0;
         border: 1px solid #808080;
@@ -173,12 +178,13 @@ header.captura {
 
 }
 
-.lupa-active {
-    display: block;
+.lupa2,.lupa3,.lupa4 {
+    display: none;
 }
 
-.lupa-inactive {
-    display: none;
+.lupa1 {
+    display: block;
+    
 }
 
 .show {
