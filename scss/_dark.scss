@@ -141,9 +141,14 @@
 
     .ventana-crear-captura {
 
-        .btn-cam,
+        .btn-cam {
+            display: none;
+        }
+        .btn-cam2,
         .btn-capturar {
-
+            display: flex;
+            justify-content: center;
+            align-content: center;
             @include btn-dark;
 
         }

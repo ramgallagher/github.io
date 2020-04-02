@@ -68,7 +68,7 @@
                             ¿Quieres comenzar a crear tu <span>guifo</span> ahora?</p>
                     </div>
                     <div class="guifos-botones">
-                        <button class="btn-cancelar"> Cancelar</button>
+                        <button class="btn-cancelar" onclick="window.location.href='index.html'"> Cancelar</button>
                         <button class="btn-start" id="btn-comenzar"> Comenzar</button>
                     </div>
                 </div>
@@ -84,14 +84,19 @@
 
                     <div id="contenedor-video" class="video-container">
                         <video id="contenedor-captura"></video>
-                        <div class="timer"><p id='crono'>00:00:00:00</p></div>
+                        <div class="timer">
+                            <p id='crono'>00:00:00:00</p>
+                        </div>
                     </div>
                     <div class="capturar-botones">
                         <button class="btn-cam"> <img src="./img/camera.svg" alt=""> </button>
-                        <button class="btn-capturar" id="btn-capturar" onclick="empezarDetener(this);"> Capturar</button>
+                        <button class="btn-cam2"> <img src="./img/camera_light.svg" alt=""> </button>
+                        <button class="btn-capturar" id="btn-capturar" onclick="empezarDetener(this);">
+                            Capturar</button>
                         <button class="btn-record"> <img src="./img/recording.svg" alt=""></button>
                         <button class="btn-listo">Listo</button>
-                        <button class="btn-repetir" id="btn-repetir"> Repetir Captura</button>
+                        <button class="btn-repetir" id="btn-repetir" onclick="window.location.href='upload.html'">
+                            Repetir Captura</button>
                         <button class="btn-subir" id="btn-subir"> Subir Guifo</button>
 
 
@@ -109,13 +114,15 @@
                 </div>
                 <div class="contenedor-imagenes">
 
+                </div>
+
             </section>
 
 
-            <script src="/camara.js"></script>
-            <script src="./scripts.js"></script>
-    </div>
 
+    </div>
+        <script src="/camara.js"></script>
+        <script src="./scripts.js"></script>
 </body>
 
 </html>

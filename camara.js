@@ -46,6 +46,9 @@ botonComenzar.addEventListener('click', function() {
     
 })
 
+
+/* Comienza a grabar */
+
 botonCapturar.addEventListener('click', () => {
     contenedorCrear.style.display = "none";
     contenedorCaptura.style.display = "block";
@@ -55,10 +58,16 @@ botonCapturar.addEventListener('click', () => {
     botonListo.style.display = "block";
     timer.style.display = "block";
     titulo.innerHTML = "Capturando tu Guifo";
-
+    empezarDetener();
+    recordGif();
 
     
 } )
+
+
+
+
+/* Se detiene la grabacion */
 
 botonListo.addEventListener('click', ()=> {
     contenedorCrear.style.display = "none";
@@ -71,8 +80,14 @@ botonListo.addEventListener('click', ()=> {
     titulo.innerHTML = "Capturando tu Guifo";
     botonRepetir.style.display = "inline-block";
     botonSubir.style.display = "inline-block";
-    
+    clearTimeout(timeout);
 })
+
+
+
+
+
+
 
     
 
