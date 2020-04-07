@@ -26,6 +26,7 @@
                 <a href="index.html"> <img src="./img/gifOF_logo_dark.png" alt="logo" id="logo" class="logo2"></a>
             </div>
             <div class="contenedor-botones">
+                <button class="btn-crear" OnClick=" location.href='upload.html'">Crear Guifos</button>
                 <button class="btn-tema">Elegir tema</button>
                 <div class="dropdown">
                     <button class="btn-tema2" id="btn-menu">
@@ -42,7 +43,7 @@
                     </div>
                 </div>
                 <div class="mis-guifos">
-                    <a href="#"> <span>M</span>is Guifos</a>
+                    <button class="mis-guifos"> <a href="#"> <span>M</span>is Guifos</a></button>
                 </div>
             </div>
         </header>
@@ -83,11 +84,14 @@
                 <div class="contenedor-ventana-captura">
 
                     <div id="contenedor-video" class="video-container">
+                        <img src="" class="imagen-gif" alt="image_gif">
                         <video id="contenedor-captura"></video>
-                        <div class="timer">
-                            <p id='crono'>00:00:00:00</p>
-                        </div>
                     </div>
+
+                    <div class="timer">
+                        <p id='crono'>00:00:00:00</p>
+                    </div>
+
                     <div class="capturar-botones">
                         <button class="btn-cam"> <img src="./img/camera.svg" alt=""> </button>
                         <button class="btn-cam2"> <img src="./img/camera_light.svg" alt=""> </button>
@@ -95,7 +99,7 @@
                             Capturar</button>
                         <button class="btn-record"> <img src="./img/recording.svg" alt=""></button>
                         <button class="btn-listo">Listo</button>
-                        <button class="btn-repetir" id="btn-repetir" onclick="window.location.href='upload.html'">
+                        <button class="btn-repetir" id="btn-repetir">
                             Repetir Captura</button>
                         <button class="btn-subir" id="btn-subir"> Subir Guifo</button>
 
@@ -104,25 +108,122 @@
                 </div>
             </div>
             <!--Fin Ventana de captura y cambio de botones  -->
+            <section>
+                <div class="ventana-crear-captura" id="ventana-captura2">
+                    <div class="title-4">
+                        <p id="titulo">Subiendo Gif</p>
+
+                    </div>
+                    <div class="contenedor-ventana-captura2">
+                        <div id="contenedor-video2" class="video-container-subiendo">
+                            <img src="./img/globe_img.png" alt="globo">
+                            <p>Estamos subiendo tu guifo...</p>
+                            <img src="./img/gifs/loadingbarrrr.gif" alt="loading_bar">
+                            <p>Tiempo restante: <span>38 años</span> algunos minutos</p>
+
+                        </div>
+                    </div>
+                    <div class="contenedor-boton-cancelar">
+                        <button class="btn-cancelar2">Cancelar</button>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="ventana-crear" id="ventana-exito">
+                    <div class="title-4">
+                        <p>Guifo Subido Con Éxito</p>
+                    </div>
+                    <div class="contenedor-final">
+                        <div id="gif-final" class="contenedor-imgfinal">
+                            <figure>
+                                <img src="" alt="" class="imgfinal0">
+                            </figure>
+                        </div>
+                        <div class="contenedor-exito">
+                            <p>Guifo creado con exito</p>
+                            <button class="btn-copiar" id="copy_link">Copiar enlace Guifo</button>
+                            <p class="text">Enlace copiado con exito</p>
+                            <button class="btn-download"><a href="" download="" class="a_download">Descargar
+                                    Guifo</a></button>
+                        </div>
+                    </div>
+                    <div class="contenedor-boton">
+                        <button class="btn-listo2">Listo</a></button>
+                    </div>
+                </div>
+
+
+            </section>
 
             <section>
 
-
-
-                <div class="sugerencias">
+                <div class="sugerencias" id="bar_mis_guifos">
                     <input type="text" class="barra-sugerencias" placeholder="  Mis guifos:">
                 </div>
-                <div class="contenedor-imagenes">
-
+                <div class="contenedor-mis-guifos">
+                    <div class="contenedor-mis-guifos-img guifos_img0">
+                        <figure>
+                            <img src="" alt="" class="mis_guifos_img0">
+                        </figure>
+                    </div>
+                    <div class="contenedor-mis-guifos-img guifos_img1">
+                        <figure>
+                            <img src="" alt="" class="mis_guifos_img1">
+                        </figure>
+                    </div>
+                    <div class="contenedor-mis-guifos-img guifos_img2">
+                        <figure>
+                            <img src="" alt="" class="mis_guifos_img2">
+                        </figure>
+                    </div>
+                    <div class="contenedor-mis-guifos-img guifos_img3">
+                        <figure>
+                            <img src="" alt="" class="mis_guifos_img3">
+                        </figure>
+                    </div>
+                    <div class="contenedor-mis-guifos-img guifos_img4">
+                        <figure>
+                            <img src="" alt="" class="mis_guifos_img4">
+                        </figure>
+                    </div>
+                    <div class="contenedor-mis-guifos-img guifos_img5">
+                        <figure>
+                            <img src="" alt="" class="mis_guifos_img5">
+                        </figure>
+                    </div>
+                    <div class="contenedor-mis-guifos-img guifos_img6">
+                        <figure>
+                            <img src="" alt="" class="mis_guifos_img6">
+                        </figure>
+                    </div>
+                    <div class="contenedor-mis-guifos-img guifos_img7">
+                        <figure>
+                            <img src="" alt="" class="mis_guifos_img7">
+                        </figure>
+                    </div>
+                    <div class="contenedor-mis-guifos-img guifos_img8">
+                        <figure>
+                            <img src="" alt="" class="mis_guifos_img8">
+                        </figure>
+                    </div>
                 </div>
 
+            </section>
+            <section>
+                <div id="gif-final">
+
+                </div>
             </section>
 
 
 
     </div>
-        <script src="/camara.js"></script>
-        <script src="./scripts.js"></script>
+    </div>
+
+    <script src="../js/scripts.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/camara.js"></script>
+
 </body>
 
 </html>

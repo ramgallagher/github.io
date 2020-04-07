@@ -142,9 +142,9 @@
     .ventana-crear-captura {
 
         .btn-cam {
-            display: none;
+            display: block;
         }
-        .btn-cam2,
+        
         .btn-capturar {
             display: flex;
             justify-content: center;
@@ -156,7 +156,7 @@
     }
 
     .timer {
-        margin: auto;
+        margin: 0 .5em;
         padding: 0px 30px;
         float: left;
         text-align: center;
