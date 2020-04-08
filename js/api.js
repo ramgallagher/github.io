@@ -1,4 +1,4 @@
-/*TRENDING ENDPOINT */
+/*Trending Fetch */
 
 const apikey = 'bDgrAsOgnsjQTVFZNv9Vu5m7Z6kRi930';
 const path = `https://api.giphy.com/v1/gifs/trending?api_key=${apikey}&limit=12`;
@@ -24,5 +24,5 @@ fetch(path).then(function (response) {
     console.log(err.message)
 })
 
-/* Search ENDPOINT */ 
+
 

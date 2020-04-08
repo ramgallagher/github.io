@@ -102,7 +102,7 @@
 .box {
     background: #e6e6e6;
     box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
-    
+
     width: 313px;
     height: 313px;
 
@@ -214,15 +214,22 @@
     }
 }
 
-#tendencias_resultados {
+.tendencias_resultados {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
     justify-content: space-between;
 
-    img {
+    img{
         padding: 5px;
+
+        &:hover { 
+        -webkit-transform: scale(0.97);
+        transform: scale(0.97);
+        -webkit-transition: 0.5s all ease;
+        transition: 0.5s all ease;
+    }
     }
 
 }

@@ -312,6 +312,7 @@
         @extend .btn-cancelar2;
         width: 256px;
         margin-top: .5em;
+        cursor: pointer;
 
         a {
             text-decoration: none;
@@ -337,6 +338,7 @@
         border: 1px solid #110038;
         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
         margin-top: 1em;
+        cursor: pointer;
 
 
         a {
@@ -360,4 +362,28 @@
             
         }
     }
+}
+
+.contenedor-mis-guifos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1em;
+
+    img:hover {
+        -webkit-transform: scale(0.97);
+            transform: scale(0.97);
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    }
+}
+.text  {
+    display: none;
+    font-family: $font;
+    background: rgb(247, 201, 243);
+    padding: 0.3em;
+    text-align: center;
+    margin: auto;
+    color: white;
+    
 }

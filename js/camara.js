@@ -20,12 +20,7 @@ const botonSubir = document.getElementById('btn-subir');
 let recorder = null;
 let blob = null;
 let container = document.getElementById('gif-final');
-
 let text = document.querySelector('.text');
-
-var arreglo = [];
-var arrayGuifos = [];
-
 
 
 text.style.display = "none";
@@ -52,6 +47,11 @@ botonComenzar.addEventListener('click', async () => {
 
 
 })
+
+
+
+
+
 
 
 /* Comienza a grabar */
@@ -110,9 +110,6 @@ botonRepetir.addEventListener('click', async () => {
 
 })
 
-
-
-
 const getMedia = async () => {
     let stream = null;
     try {
@@ -140,16 +137,10 @@ botonSubir.addEventListener('click', async () => {
         contenedorCaptura.style.display = "none";
         contenedorUpload.style.display = "none";
         contenedorFinal.style.display = "block"
-    }, 3000);
+    }, 5000);
 
 
 })
-
-
-
-
-
-
 
 /* Funcion grabar */
 
@@ -179,11 +170,6 @@ const stopRecord = async (recorder, video) => {
     await recorder.stopRecording();
     let blob = await recorder.getBlob();
 
-
-    /*agregar addeventlistener del boton upload y formdata y pasarlo al fetch */
-
-
-
     botonSubir.addEventListener('click', function () {
 
         let form = new FormData();
@@ -211,23 +197,21 @@ const stopRecord = async (recorder, video) => {
                         imgfinal.setAttribute("alt", data.data.title);
                         imgfinal.setAttribute("width", "320");
                         imgfinal.setAttribute("height", "240");
-                        let getLink = document.querySelector(".download_link");
+                        let verMas = document.querySelector(".download_link");
+                        verMas.setAttribute("action", data.data.bitly_url);
+                        let getLink = document.querySelector(".btn-copiar");
                         getLink.setAttribute("action", data.data.bitly_url);
                         botonCopiar.addEventListener("click", () => {
                             navigator.clipboard.writeText(data.data.bitly_url);
                             document.querySelector(".text").style.display = "block";
                             var ref = setInterval(() => {
                                 document.querySelector(".text").style.display = "none";
-                            }, 5000);
+                            }, 3000);
                         });
-                        if (localStorage.getItem("mis-guifos") == null) {
-                            arrayGuifos.push(data);
-                            localStorage.setItem("mis-guifos", JSON.stringify(arrayGuifos));
-                        } else {
-                            arrayGuifos = JSON.parse(localStorage.getItem("mis-guifos"));
-                            arrayGuifos.push(data);
-                            localStorage.setItem("mis-guifos", JSON.stringify(arrayGuifos));
-                        }
+
+                        localStorage.setItem("gifosCreados" + data.data.id, JSON.stringify(data));
+
+                    
 
                     })
                     .catch(error => {
@@ -238,12 +222,14 @@ const stopRecord = async (recorder, video) => {
                 return error;
             });
     })
-
+    
     vistaPrevia(blob);
     return blob;
 
 
 };
+
+
 
 
 
@@ -258,13 +244,10 @@ const vistaPrevia = blob => {
     img.setAttribute("height", "440");
     img.style.objectFit = "cover";
     contenedorVideo.appendChild(img);
-
-
-
 };
 
 
-/* cronometro */
+/* Cronometro */
 var inicio = 0;
 var timeout = 0;
 
@@ -301,58 +284,63 @@ function LeadingZero(Time) {
 }
 
 
-/* fin cronometro */
-
 /* Crea mis guifos del local storage a la galeria */
 
 
 document.querySelector(".mis-guifos").addEventListener("click", () => {
     CrearGuifos();
+    contenedorCrear.style.display = "none";
 });
 
 
 document.querySelector('.btn-listo2').addEventListener("click", () => {
     contenedorFinal.style.display = "none";
+    location.reload();
     document.getElementById('bar_mis_guifos').style.display = "block";
-    CrearGuifos();
+
 });
 
-// /* Funcion para crear los gifs */
+ /* Cargan los guifos creados */
+
+window.addEventListener('load', () => {
+    var arrayGuifos = CrearGuifos();
+
+    arrayGuifos.forEach(element => {
+
+        let contenedorPadre = document.querySelector(".contenedor-mis-guifos");
+        let imgfinal = document.createElement('img')
+        imgfinal.setAttribute("src", element.data.images.downsized.url);
+        imgfinal.setAttribute("alt", element.data.title);
+        imgfinal.setAttribute("width", "320");
+        imgfinal.setAttribute("height", "240");
+        imgfinal.style.paddingTop = "10px";
+        contenedorPadre.appendChild(imgfinal);  
+
+    });
+
+})
+
+
+/* Funcion para crear mis guifos */
+
+function CrearGuifos() {
+    var arreglo = [];
+    let valor = localStorage.getItem("gifosCreados");
+    const data = JSON.parse(valor);
 
 
 
+    for (var i = 0; i < localStorage.length; i++) {
 
 
+        let item = localStorage.getItem(localStorage.key(i));
+        if (item.includes('data')) {
+            let itemJSON = JSON.parse(item);
+            arreglo.push(itemJSON);
+        }
 
+    }
+    return arreglo;
+}
 
-
-
-// function CrearGuifos() {
-//     let valor = localStorage.getItem("mis-guifos");
-//     const data = JSON.parse(valor);
     
-//     for (var i = 0; i < data.length; i++) {
-//         arreglo.push(data[i]);
-//     }
-
-//     for (var i = 0; i < valor.length; i++) {
-//         let imgfinal = document.querySelector(".mis_guifos_img" + i);
-//         imgfinal.setAttribute("src", arreglo[i].data.images.downsized.url);
-//         imgfinal.setAttribute("alt", arreglo[i].data.title);
-//         imgfinal.setAttribute("width", "320");
-//         imgfinal.setAttribute("height", "240");
-//         document.querySelector(".guifos_img" + i).style.display = "block";
-//     }
-//     contenedorCrear.style.display = "none";
-//     document.querySelector(".btn-crear").style.display = "block";
-//     document.getElementById('bar_mis_guifos').style.display = "block";
-//     document.querySelectorAll('.contenedor-mis-guifos')[0].style.display = "flex"
-//     if (arreglo.length > 4) {
-//         document.querySelectorAll('.contenedor-mis-guifos')[1].style.display = "block"
-//     }
-//     if (arreglo.length > 8) {
-//         document.querySelectorAll('.contenedor-mis-guifos')[2].style.display = "block"
-//     }
-//     arreglo = [];
-
-// }

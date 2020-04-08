@@ -35,6 +35,14 @@
 
     .mis-guifos a {
         color: white;
+
+    }
+
+    .mis-guifos button {
+        background-color: #110038;
+        font-family: "Chakra Petch", sans-serif;
+        color: #ffffff;
+        font-size: 16px;
     }
 
     .barra-sugerencias {
@@ -144,15 +152,27 @@
         .btn-cam {
             display: block;
         }
-        
-        .btn-capturar {
+
+        .btn-capturar,
+        .btn-cam {
             display: flex;
             justify-content: center;
             align-content: center;
             @include btn-dark;
+            color: #110038;
 
         }
 
+    }
+
+    .btn-repetir {
+        background-color: #110038;
+        color: white;
+    }
+
+    .btn-subir {
+        background: #ee3efe;
+        color: #110038;
     }
 
     .timer {
@@ -167,4 +187,29 @@
         }
     }
 
+    .video-container-subiendo {
+        p {
+            color: #110038;
+
+        }
+
+        span {
+            color: rgba(17, 0, 56, 0.64);
+        }
+    }
+
+    .contenedor-exito p {
+        color: #110038;
+
+    }
+
+    .btn-copiar,
+    .btn-download,
+    .btn-cancelar2 {
+        background: #cccccc;
+    }
+
+    .btn-listo2 {
+        background: #ee3efe;
+    }
 }

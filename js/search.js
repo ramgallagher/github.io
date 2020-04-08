@@ -16,7 +16,7 @@ let search = document.getElementById('search-input');
 let btnSearch = document.getElementById('btn-search');
 
 
-/* botones ver mas */
+/* Botones ver mas */
 
 
 
@@ -166,10 +166,6 @@ sugerencia4.addEventListener('click', () => {
 
 })
 
-
-
-/* Fin botones ver mas */
-
 /* Busquedas populares */
 
 sugerencia5.addEventListener('click', () => {
@@ -280,8 +276,7 @@ sugerencia7.addEventListener('click', () => {
 
 })
 
-/* fin botones del search */
-
+/* Barra de busqueda */
 
 
 document.addEventListener("DOMContentLoaded", init);

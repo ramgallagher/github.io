@@ -320,6 +320,14 @@ header.captura .contenedor-logo img {
   margin-top: 22px;
 }
 
+.mis-guifos button {
+  background-color: #fff0f2;
+  border: none;
+  font-family: "Chakra Petch", sans-serif;
+  color: #110038;
+  font-size: 16px;
+}
+
 /* dark mode */
 /* dark mode */
 .contenedor-logo-captura img {
@@ -664,6 +672,7 @@ header.captura .contenedor-logo img {
 .contenedor-exito button {
   width: 256px;
   margin-top: .5em;
+  cursor: pointer;
 }
 
 .contenedor-exito button a {
@@ -697,6 +706,7 @@ header.captura .contenedor-logo img {
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   margin-top: 1em;
+  cursor: pointer;
 }
 
 .contenedor-boton button a {
@@ -720,6 +730,35 @@ header.captura .contenedor-logo img {
 
 .contenedor-imgfinal figure img {
   height: 240px;
+}
+
+.contenedor-mis-guifos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1em;
+}
+
+.contenedor-mis-guifos img:hover {
+  -webkit-transform: scale(0.97);
+  transform: scale(0.97);
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+.text {
+  display: none;
+  font-family: "Chakra Petch", sans-serif;
+  background: #f7c9f3;
+  padding: 0.3em;
+  text-align: center;
+  margin: auto;
+  color: white;
 }
 
 /* dark mode */
@@ -790,6 +829,13 @@ header.captura .contenedor-logo img {
 
 .dark .mis-guifos a {
   color: white;
+}
+
+.dark .mis-guifos button {
+  background-color: #110038;
+  font-family: "Chakra Petch", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
 }
 
 .dark .barra-sugerencias, .dark .tendencias .barra-tendencias, .tendencias .dark .barra-tendencias {
@@ -908,7 +954,7 @@ header.captura .contenedor-logo img {
   display: block;
 }
 
-.dark .ventana-crear-captura .btn-capturar {
+.dark .ventana-crear-captura .btn-capturar, .dark .ventana-crear-captura .btn-cam, .dark .ventana-crear-captura .capturar-botones .btn-capturar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -923,21 +969,38 @@ header.captura .contenedor-logo img {
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   color: #FFFFFF;
+  color: #110038;
 }
 
-.dark .ventana-crear-captura .btn-capturar a {
+.dark .ventana-crear-captura .btn-capturar a,
+.dark .ventana-crear-captura .btn-cam a,
+.dark .ventana-crear-captura .capturar-botones .btn-capturar a {
   text-decoration: none;
   color: #FFFFFF;
 }
 
-.dark .ventana-crear-captura .btn-capturar:hover {
+.dark .ventana-crear-captura .btn-capturar:hover,
+.dark .ventana-crear-captura .btn-cam:hover,
+.dark .ventana-crear-captura .capturar-botones .btn-capturar:hover {
   background: #CE36DB;
 }
 
-.dark .ventana-crear-captura .btn-capturar:hover span {
+.dark .ventana-crear-captura .btn-capturar:hover span,
+.dark .ventana-crear-captura .btn-cam:hover span,
+.dark .ventana-crear-captura .capturar-botones .btn-capturar:hover span {
   border: 1px dotted #110038;
   width: 100%;
   height: 100%;
+}
+
+.dark .btn-repetir {
+  background-color: #110038;
+  color: white;
+}
+
+.dark .btn-subir {
+  background: #ee3efe;
+  color: #110038;
 }
 
 .dark .timer {
@@ -949,6 +1012,30 @@ header.captura .contenedor-logo img {
 
 .dark .timer p {
   color: #110038;
+}
+
+.dark .video-container-subiendo p {
+  color: #110038;
+}
+
+.dark .video-container-subiendo span {
+  color: rgba(17, 0, 56, 0.64);
+}
+
+.dark .contenedor-exito p {
+  color: #110038;
+}
+
+.dark .btn-copiar,
+.dark .btn-download,
+.dark .btn-cancelar2,
+.dark .contenedor-exito button,
+.contenedor-exito .dark button {
+  background: #cccccc;
+}
+
+.dark .btn-listo2 {
+  background: #ee3efe;
 }
 
 /* dark mode */
@@ -1193,7 +1280,7 @@ header.captura .contenedor-logo img {
   padding-left: 10px;
 }
 
-#tendencias_resultados {
+.tendencias_resultados {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1209,7 +1296,14 @@ header.captura .contenedor-logo img {
           justify-content: space-between;
 }
 
-#tendencias_resultados img {
+.tendencias_resultados img {
   padding: 5px;
+}
+
+.tendencias_resultados img:hover {
+  -webkit-transform: scale(0.97);
+  transform: scale(0.97);
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
 }
 /*# sourceMappingURL=main.css.map */

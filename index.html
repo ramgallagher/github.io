@@ -18,7 +18,7 @@
         <header>
             <div class="contenedor-logo">
                 <a href="index.html"> <img src="./img/gifOF_logo.png" alt="logo" id="logo" class="logo1"></a></div>
-            <a href="index.html"> <img src="./img/gifOF_logo_dark.png" alt="logo" id="logo" class="logo2"></a>
+            <a href="index.html"> <img src="./img/gifOF_logo_dark.png" alt="logo" id="logodark" class="logo2"></a>
 
             <div class="contenedor-botones">
                 <button class="btn-crear" OnClick=" location.href='upload.html'">Crear Guifos</button>
@@ -29,10 +29,10 @@
                     <div class="drop-content" id="list">
                         <ul>
                             <li> <button id="day">
-                                    <p> <span>S</span>ailor Day</p>
+                                    <span>S</span>ailor Day
                                 </button></li>
                             <li> <button id="dark">
-                                    <p> Sailor Night</p>
+                                    Sailor Night
                                 </button></li>
                         </ul>
                     </div>
@@ -52,12 +52,11 @@
                         <input type="search" id="search-input" class="searchterm"
                             placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" oninput="cambioEstado()">
                         <button class="btn-buscar" id="btn-search" onclick="dropdown()">
-                            <img src="./img/lupa_inactive.svg" alt="magnifying_glass" class="lupa1"></img>
+                            <img src="./img/lupa_inactive.svg" alt="magnifying_glass" class="lupa1">
                             <img src="./img/lupa.svg" alt="magnifying_glass_light" class="lupa2">
-                            <img src="./img/Combined Shape.svg" alt="magnifying_glass_light" class="lupa3">
-                            <img src="./img/lupa_light.svg" alt="magnifying_glass_light"
-                                class="lupa4">Buscar</button>
-                        </button>
+                            <img src="./img/Combined_Shape.svg" alt="magnifying_glass_light" class="lupa3">
+                            <img src="./img/lupa_light.svg" alt="magnifying_glass_light" class="lupa4">
+                            Buscar</button>
                     </div>
                 </div>
             </div>
@@ -75,13 +74,13 @@
 
         <section>
             <div class="sugerencias">
-                <input type="text" class="barra-sugerencias" placeholder="   Hoy te sugerimos:">
+                <input type="text" class="barra-sugerencias" placeholder="   Hoy te sugerimos:" disabled="disabled">
             </div>
             <div class="contenedor-imagenes">
                 <div class="box">
                     <div class="title">
                         <p>#bear</p>
-                        <img src="./img/button close.svg" alt="boton" class="img1">
+                        <img src="./img/button_close.svg" alt="boton" class="img1">
                     </div>
                     <figure class="gif">
                         <img src="./img/gifs/bear.gif" alt="kermit">
@@ -93,7 +92,7 @@
                 <div class="box">
                     <div class="title">
                         <p>#Kermit </p>
-                        <img src="./img/button close.svg" alt="boton">
+                        <img src="./img/button_close.svg" alt="boton">
                     </div>
                     <figure class="gif">
                         <img src="./img/gifs//kermitconpeluca.gif" alt="kermit">
@@ -105,7 +104,7 @@
                 <div class="box">
                     <div class="title">
                         <p>#Muppet </p>
-                        <img src="./img/button close.svg" alt="boton">
+                        <img src="./img/button_close.svg" alt="boton">
                     </div>
                     <figure class="gif">
                         <img src="./img/gifs/muppet.gif" alt="kermit">
@@ -117,7 +116,7 @@
                 <div class="box">
                     <div class="title">
                         <p> #Calamardo </p>
-                        <img src="./img/button close.svg" alt="boton">
+                        <img src="./img/button_close.svg" alt="boton">
                     </div>
                     <figure class="gif">
                         <img src="./img/gifs/calamardo.gif" alt="kermit">
@@ -131,19 +130,19 @@
 
         <section>
             <div class="tendencias" id="ventana-tendencias">
-                <input type="text" id="texto-tendencias" class="barra-tendencias" placeholder="  Tendencias:">
+                <input type="text" id="texto-tendencias" class="barra-tendencias" placeholder="  Tendencias:" disabled="disabled">
             </div>
             <div class="tendencias" id="ventana-resultado">
                 <input type="text" id="texto-resultados" class="barra-tendencias" placeholder="  Resultados:">
             </div>
 
-            <div id="tendencias_resultados">
+            <div id="tendencias_resultados" class="tendencias_resultados">
             </div>
-
+        </section>
     </div>
 
-    </section>
-    </div>
+    
+
 
 
 
