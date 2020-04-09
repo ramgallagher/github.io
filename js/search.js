@@ -324,3 +324,10 @@ function init() {
   });
 }
 
+search.addEventListener("keyup", ev => {
+
+  if (ev.keyCode === 13) {
+    ev.preventDefault();
+    btnSearch.click();
+  }
+})

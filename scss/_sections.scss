@@ -114,16 +114,16 @@
 
 .contenedor-imagenes {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
+    
     justify-content: space-between;
     margin-top: 20px;
+    position: relative;
 
     .gif img {
         border: 0 1px 1px 0 solid #E6E6E6;
         width: 306px;
         height: 292px;
+
     }
 }
 
